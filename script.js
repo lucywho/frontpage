@@ -1,5 +1,3 @@
-console.log("script attached", $);
-
 let theme = $("head link#style").attr("href");
 
 $(".self").html('<img src="./assets/lucy.JPG" alt="Lucy Toman" />');
@@ -9,26 +7,33 @@ $(".theme").html(
     '<button id="theme" onclick="toggleTheme()">dark mode</button>'
 );
 
-$(".projects-header").html("Recent Projects!");
-$(".text").html("Welcome to my website");
-$(".about-me").html(
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut exercitationem quibusdam impedit facilis ipsum nulla aut laboriosam consequatur, modi quas voluptas, nostrum illo consequuntur recusandae atque quo porro debitis! Eaque."
-);
+function start() {
+    $(".projects-header").html("Recent Projects");
+    $(".text").html("Welcome to my website!");
+    $(".about-me").html(
+        `<strong>HIRE ME!</strong></br></br>I'm a recent graduate of Spiced Academy's full stack web development course. I write in vanilla JavaScript and jQuery, with Node.js. I have built projects using Handlebars, Vue and React, and have created databases with postgreSQL.Now I'm looking for new challenges as a junior developer.</br></br>
+        I have a degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. Native English-speaker with B1+ German</br></br>
+        <em>Note: This website is still under construction and some "Recent Projects" link to github respositories.</em>`
+    );
+}
+
+$(document).ready(function() {
+    start();
+});
 
 $("#en").click(function() {
-    $(".projects-header").html("Recent Projects!");
-    $(".text").html("Welcome to my website");
-    $(".about-me").html(
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut exercitationem quibusdam impedit facilis ipsum nulla aut laboriosam consequatur, modi quas voluptas, nostrum illo consequuntur recusandae atque quo porro debitis! Eaque."
-    );
+    start();
 });
 
 $("#de").click(function() {
-    $(".projects-header").html("Neue Projekte");
+    $(".projects-header").html("Aktuelle Projekte");
     $(".text").html("Wilkommen auf meiner Website!");
 
-    $("about-me").html(
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut exercitationem quibusdam impedit facilis ipsum nulla aut laboriosam consequatur, modi quas voluptas, nostrum illo consequuntur recusandae atque quo porro debitis! Eaque."
+    $(".about-me").html(
+        `<strong>Ich bin die Richtige für Ihr Team!</strong></br></br>Ich habe den Full-Stack-Web-Developer-Kurs der Spiced Academy absolviert. Ich schreibe in Vanilla JavaScript und jQuery mit Node.js. Ich habe Projekte mit Handlebars, Vue und React sowie Datenbanken mit PostgreSQL erstellt. Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
+        </br></br>
+        Ich habe einen Abschluss in Bildung und kann 15 Jahre Erfahrung als Politikberaterin und Projektmanagerin im britischen öffentlichen Dienst vorweisen.</br></br>
+       <em> Hinweis: Diese Website befindet sich noch im Aufbau und einige "Aktuelle Projekte" verlinken auf Github Repositories.</em>`
     );
 });
 
