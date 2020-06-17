@@ -1,4 +1,4 @@
-Front page for personal website
+Front page for my personal website
 
 Written with jQuery.
 
