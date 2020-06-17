@@ -84,6 +84,15 @@ a:hover {
     text-align: center;
 }
 
+.choice {
+    height: 100%;
+    width: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .lang,
 .theme {
     height: 100%;
