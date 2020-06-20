@@ -1,6 +1,8 @@
 let theme = $("head link#style").attr("href");
 
-$(".self").html('<img src="./assets/lucy.JPG" alt="Lucy Toman" />');
+$(".self").html(
+    '<img src="./assets/lucy.jpg" alt="Lucy Toman profile photo" />'
+);
 $(".name").html("Lucy Toman");
 $(".lang").html('<button id="en">🇬🇧</button> <button id="de"> 🇩🇪</button> ');
 $(".theme").html(
