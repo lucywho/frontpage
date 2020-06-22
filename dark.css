@@ -187,7 +187,7 @@ em {
     object-fit: cover;
 }
 
-.projects img {
+.project-image {
     width: 40%;
     border: 5px solid #f1e9da;
     border-radius: 20px;
@@ -244,4 +244,58 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 415px) {
+    body {
+        height: auto;
+    }
+
+    #container {
+        grid-template-columns: 75px 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: "pic name" "welcome welcome" "about-me about-me" "project-container project-container";
+    }
+
+    .self img {
+        height: 75px;
+        border-width: 2px;
+    }
+
+    .name,
+    .welcome,
+    .projects-header {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+        padding: 2px;
+    }
+
+    .about-me,
+    .project-name {
+        font-size: 1rem;
+        border-width: 2px;
+    }
+
+    .project-name {
+        padding-bottom: 5px;
+    }
+
+    em {
+        font-size: 0.5rem;
+    }
+
+    .project-container {
+        background-image: none;
+        padding-bottom: 10px;
+    }
+
+    .project-image {
+        border-width: 2px;
+        height: 60px;
+        width: 60px;
+    }
 }

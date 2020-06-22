@@ -4,9 +4,9 @@ $(".self").html(
     '<img src="./assets/lucy.jpg" alt="Lucy Toman profile photo" />'
 );
 $(".name").html("Lucy Toman");
-$(".lang").html('<button id="en">🇬🇧</button> <button id="de"> 🇩🇪</button> ');
+$(".lang").html('<button id="en">🇬🇧</button> <button id="de">🇩🇪</button> ');
 $(".contact-me").html(
-    `<a href="mailto:lucy.toman+website@gmail.com"><i class="fa fa-envelope"> </i> email </a> <a href="https://github.com/lucywho"><i class='fab fa-github'> </i> GitHub </a> <a href="https://www.linkedin.com/in/lucytoman/"><i class='fab fa-linkedin'> </i> LinkedIn</a>`
+    `<a href="mailto:lucy.toman+website@gmail.com"><i class="far fa-envelope"> </i> email </a> <a href="https://github.com/lucywho"><i class='fab fa-github'> </i> GitHub </a> <a href="https://www.linkedin.com/in/lucytoman/"><i class='fab fa-linkedin'> </i> LinkedIn</a>`
 );
 
 $(".theme").html('<button id="theme" onclick="toggleTheme()">🌒</button>');
