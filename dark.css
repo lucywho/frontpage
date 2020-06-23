@@ -16,8 +16,13 @@ a {
     color: inherit;
 }
 
-a:hover {
+a:hover,
+#cv:hover {
     color: #fb8b24;
+}
+
+#cv {
+    cursor: pointer;
 }
 
 #container {
@@ -27,6 +32,8 @@ a:hover {
     grid-template-rows: 1fr 1fr 4fr;
     grid-template-areas: "pic name project-container" "welcome welcome project-container" "about-me about-me project-container";
 }
+
+/*__BANNER__*/
 
 .pic {
     grid-area: pic;
@@ -61,6 +68,8 @@ a:hover {
     border-radius: 30px;
     color: #fb8b24;
 }
+
+/*__WELCOME MESSAGE__*/
 
 .welcome {
     grid-area: welcome;
@@ -120,6 +129,8 @@ button:hover {
     margin: 0 10px;
 }
 
+/*__INFO BOX__*/
+
 .about-me {
     grid-area: about-me;
     margin: 1%;
@@ -145,6 +156,8 @@ em {
     color: #939a9d;
     font-size: 1rem;
 }
+
+/*__PROJECTS__*/
 
 .project-container {
     grid-area: project-container;
@@ -246,6 +259,98 @@ em {
     align-items: center;
 }
 
+/*__MODAL__*/
+
+.modal-container {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.vis {
+    visibility: visible;
+    z-index: +1;
+}
+
+.cv-modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #041f4a;
+    height: 90vh;
+    width: 80%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+#modal-x {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+}
+
+#X {
+    color: #fb8b24;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.modal-text {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.modal-text a {
+    font-size: 1rem;
+    padding: 0;
+}
+
+.cv-text {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fb8b24;
+}
+
+li {
+    margin: 1% 0 1% 2%;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: #fb8b24;
+    margin: 2% 0 1% 0;
+}
+
+.print h4 {
+    margin-top: 2%;
+}
+
+.print a {
+    font-size: 1.25rem;
+    margin-left: 2%;
+}
+
+.print a:hover {
+    color: #c70000;
+}
+
 @media screen and (max-width: 415px) {
     body {
         height: auto;
@@ -297,5 +402,10 @@ em {
         border-width: 2px;
         height: 60px;
         width: 60px;
+    }
+
+    #X {
+        font-size: 1rem;
+        padding: 0 5px 5px 0;
     }
 }
