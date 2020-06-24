@@ -308,6 +308,10 @@ em {
     padding-right: 10px;
 }
 
+#X:hover {
+    color: #c70000;
+}
+
 .modal-text {
     width: 100%;
     overflow-y: scroll;
