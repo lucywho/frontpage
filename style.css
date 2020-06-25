@@ -203,7 +203,7 @@ em {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1px 1px;
+    gap: 10px 1px;
     grid-template-areas: "project1 project2" "project3 project4" "project5 project6";
     grid-area: projects;
 
@@ -211,7 +211,8 @@ em {
 }
 
 .project-image {
-    width: 40%;
+    width: 22vh;
+    height: 22vh;
     border: 5px solid #041f4a;
     border-radius: 20px;
     padding: 1%;
@@ -276,7 +277,7 @@ em {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(4, 31, 74, 0.35);
     position: fixed;
     top: 0;
     left: 0;
