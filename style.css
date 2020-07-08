@@ -229,6 +229,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project2 {
@@ -237,6 +238,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project3 {
@@ -245,6 +247,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project4 {
@@ -253,6 +256,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project5 {
@@ -261,6 +265,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project6 {
@@ -269,6 +274,7 @@ em {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /*__MODAL__*/
