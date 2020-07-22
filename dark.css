@@ -8,12 +8,13 @@ body {
     max-height: 100vh;
     font-family: "Montserrat", sans-serif;
     color: #f1e9da;
-    background-color: #041f4a;
+    /* background-color: #041f4a; */
+    background-image: linear-gradient(to bottom right, #041f4a 60%, #939a9d);
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: rgb(75, 175, 117);
     text-align: center;
 }
 
@@ -24,6 +25,7 @@ a:hover,
 
 #cv {
     cursor: pointer;
+    color: rgb(75, 175, 117);
 }
 
 #container {
@@ -62,10 +64,27 @@ a:hover,
     justify-content: center;
     align-items: center;
 
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
 
-    background-image: linear-gradient(90deg, #041f4a, #939a9d);
+    /* background-image: linear-gradient(90deg, transparent 20%, #939a9d); */
+
+    background-image: linear-gradient(
+        90deg,
+        transparent 10%,
+        rgba(147, 154, 157, 0.05) 19%,
+        rgba(147, 154, 157, 0.1) 34%,
+        rgba(147, 154, 157, 0.2) 47%,
+        rgba(147, 154, 157, 0.3) 56%,
+        rgba(147, 154, 157, 0.4) 65%,
+        rgba(147, 154, 157, 0.5) 73%,
+        rgba(147, 154, 157, 0.6) 80%,
+        rgba(147, 154, 157, 0.7) 86%,
+        rgba(147, 154, 157, 0.8) 91%,
+        rgba(147, 154, 157, 0.9) 98%,
+        rgba(147, 154, 157, 1) 100%
+    );
+
     border-radius: 30px;
     color: #fb8b24;
 }
@@ -141,7 +160,21 @@ button:hover {
     align-items: center;
     text-align: center;
     padding: 2%;
-    border: 5px solid rgb(241, 233, 218);
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(147, 154, 157, 0.05) 19%,
+        rgba(147, 154, 157, 0.1) 34%,
+        rgba(147, 154, 157, 0.2) 47%,
+        rgba(147, 154, 157, 0.3) 56%,
+        rgba(147, 154, 157, 0.4) 65%,
+        rgba(147, 154, 157, 0.5) 73%,
+        rgba(147, 154, 157, 0.6) 80%,
+        rgba(147, 154, 157, 0.7) 86%,
+        rgba(147, 154, 157, 0.8) 91%,
+        rgba(147, 154, 157, 0.9) 98%,
+        rgba(147, 154, 157, 1) 100%,
+        #041f4a
+    );
     border-radius: 30px;
     font-size: 1.25rem;
 }
@@ -154,8 +187,9 @@ button:hover {
 }
 
 em {
-    color: #939a9d;
-    font-size: 1rem;
+    color: #214e34;
+    font-size: 0.8rem;
+    margin: 1rem 0 0 0;
 }
 
 /*__PROJECTS__*/
@@ -165,7 +199,7 @@ em {
     margin: 1%;
 
     font-size: 2rem;
-    background-image: linear-gradient(#041f4a, #939a9d);
+    background-image: linear-gradient(to top left, #041f4a, #939a9d);
     border-radius: 30px;
 
     display: grid;
