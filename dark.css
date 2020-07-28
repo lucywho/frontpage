@@ -8,8 +8,7 @@ body {
     max-height: 100vh;
     font-family: "Montserrat", sans-serif;
     color: #f1e9da;
-    /* background-color: #041f4a; */
-    background-image: linear-gradient(to bottom right, #041f4a 60%, #939a9d);
+    background-color: #041f4a;
 }
 
 a {
@@ -187,7 +186,7 @@ button:hover {
 }
 
 em {
-    color: #214e34;
+    color: #4baf75;
     font-size: 0.8rem;
     margin: 1rem 0 0 0;
 }
@@ -400,6 +399,7 @@ h5 {
 @media screen and (max-width: 415px) {
     body {
         height: auto;
+        background-image: none;
     }
 
     #container {
@@ -441,6 +441,7 @@ h5 {
 
     .project-container {
         background-image: none;
+        background-color: ;
         padding-bottom: 10px;
     }
 
@@ -453,5 +454,23 @@ h5 {
     #X {
         font-size: 1rem;
         padding: 0 5px 5px 0;
+    }
+
+    .cv-text {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        padding: 10px 0 0 0;
+    }
+
+    h5 {
+        font-size: 1rem;
+        margin: 2% 0 0 0;
+    }
+
+    .print a {
+        font-size: 1rem;
     }
 }

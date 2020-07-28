@@ -9,7 +9,6 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #041f4a;
     background-color: #f1e9da;
-    background-image: linear-gradient(to bottom right, #f1e9da, #939a9d);
 }
 
 a {
@@ -379,6 +378,7 @@ h5 {
 @media screen and (max-width: 415px) {
     body {
         height: auto;
+        background-image: none;
     }
 
     #container {
@@ -432,5 +432,23 @@ h5 {
     #X {
         font-size: 1rem;
         padding: 0 5px 5px 0;
+    }
+
+    .cv-text {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        padding: 10px 0 0 0;
+    }
+
+    h5 {
+        font-size: 1rem;
+        margin: 2% 0 0 0;
+    }
+
+    .print a {
+        font-size: 1rem;
     }
 }
