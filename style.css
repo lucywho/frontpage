@@ -123,21 +123,16 @@ button {
     border-radius: 20px;
 }
 
+button:hover,
+button:focus {
+    background-color: #939a9d;
+}
+
 #theme {
-    color: #f1e9da;
     background-color: #041f4a;
 }
 
-#theme:hover,
-#theme:focus {
-    background-color: #939a9d;
-}
-
-button:hover {
-    background-color: #939a9d;
-}
-
-#de {
+#lang {
     margin: 0 10px;
 }
 
@@ -154,7 +149,6 @@ button:hover {
     padding: 2%;
     background-image: linear-gradient(to bottom left, #f1e9da, #939a9d);
     border-radius: 30px;
-
     font-size: 1.25rem;
 }
 
