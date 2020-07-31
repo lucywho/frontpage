@@ -69,7 +69,7 @@ function start() {
     );
 
     $(".about-me-text").html(
-        `<strong>HIRE ME!</strong></br></br>I'm a recent graduate of <a href="https://www.spiced-academy.com/en/" target="_blank">Spiced Academy</a>'s full stack web development course. I write in vanilla JavaScript and jQuery, with Node.js. I have built projects using Handlebars, Vue and React, and have created databases with postgreSQL.Now I'm looking for new challenges as a junior developer.</br></br>
+        `<strong>HIRE ME!</strong></br></br>I'm a recent graduate of <a href="https://www.spiced-academy.com/en/" target="_blank">Spiced Academy</a>'s full stack web development course. I write in vanilla JavaScript and jQuery, with Node.js. I have built projects using Handlebars, Vue and React, and have created databases with postgreSQL. Now I'm looking for new challenges as a junior developer.</br></br>
         I have a degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. Native English-speaker with Intermediate German</br></br>
         `
     );

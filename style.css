@@ -175,12 +175,9 @@ em {
     background-image: linear-gradient(to bottom right, #939a9d, #f1e9da);
     border-radius: 30px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 5fr;
-    gap: 2% 2%;
-    grid-template-areas: "projects-header projects-header" "projects projects";
-    grid-area: project-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .projects-header {
@@ -190,88 +187,55 @@ em {
     text-align: center;
     align-items: center;
     font-weight: bold;
+    padding-top: 2%;
+}
+
+.project a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-name {
-    font-size: 1.5rem;
-    padding-top: 1%;
+    margin: 2% 0;
+    font-size: 1.75rem;
+    font-weight: bold;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px 1px;
-    grid-template-areas: "project1 project2" "project3 project4" "project5 project6";
-    grid-area: projects;
-
-    object-fit: cover;
+.project-info {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
 }
 
-.project-image {
-    width: 22vh;
-    height: 22vh;
+.image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+img.project-image {
+    width: 40vh;
+    height: 40vh;
     border: 5px solid #041f4a;
     border-radius: 20px;
-    padding: 1%;
+    padding: 2%;
+}
+
+.project-description {
+    padding: 0 20px 0 10px;
 }
 
 .projects p {
     margin-top: 2%;
-}
-
-.project1 {
-    grid-area: project1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.project2 {
-    grid-area: project2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.project3 {
-    grid-area: project3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.project4 {
-    grid-area: project4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.project5 {
-    grid-area: project5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.project6 {
-    grid-area: project6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /*__MODAL__*/
@@ -393,19 +357,24 @@ h5 {
         font-size: 1.5rem;
     }
 
+    .projects-header {
+        margin: 10px 0;
+    }
+
     button {
         font-size: 0.75rem;
         padding: 2px;
     }
 
     .about-me,
-    .project-name {
+    .project-info {
         font-size: 1rem;
         border-width: 2px;
     }
 
     .project-name {
-        padding-bottom: 5px;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
     }
 
     em {
@@ -414,13 +383,12 @@ h5 {
 
     .project-container {
         background-image: none;
-        padding-bottom: 10px;
+        height: 600px;
     }
 
-    .project-image {
+    img.project-image {
         border-width: 2px;
-        height: 60px;
-        width: 60px;
+        margin-bottom: 10px;
     }
 
     #X {
