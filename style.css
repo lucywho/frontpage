@@ -28,7 +28,8 @@ a:hover,
 }
 
 #container {
-    height: 100vh;
+    animation: fadeIn 3s forwards;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 150px 1fr 1fr;
     grid-template-rows: 1fr 1fr 4fr;
@@ -120,12 +121,13 @@ button {
     padding: 5px;
     border: 2px solid #041f4a;
     background-color: #f1e9da;
+    color: #fb8b24;
     border-radius: 20px;
 }
 
 button:hover,
 button:focus {
-    background-color: #939a9d;
+    background-color: #c70000;
 }
 
 #theme {
@@ -177,6 +179,7 @@ em {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .projects-header {
@@ -236,6 +239,18 @@ img.project-image {
 
 .projects p {
     margin-top: 2%;
+}
+
+.dot {
+    border: 1px #c70000 solid;
+}
+
+.dot:hover {
+    background-color: #fb8b24;
+}
+
+.fill-in {
+    background-color: #c70000;
 }
 
 /*__MODAL__*/

@@ -1,11 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 #carousel {
     height: 100%;
-    min-height: 600px;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     object-fit: cover;
     background-color: transparent;
@@ -33,33 +37,44 @@
     transition-property: transform;
     transition-duration: 4s;
     transition-timing-function: cubic-bezier((0.25, 0.5, 0.5, 1));
+    animation: fadeIn 3s forwards;
 }
 
 #carousel .offscreen-left {
     transform: translateX(-100%);
     transition-property: transform;
     transition-duration: 4s;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 #dots {
     position: absolute;
-    bottom: 2%;
+    bottom: 1%;
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
 
 .dot {
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
     border-radius: 50%;
-    border: 2px #041f4a solid;
-}
-
-.dot:hover {
-    background-color: #939a9d;
-}
-
-.fill-in {
-    background-color: #041f4a;
 }

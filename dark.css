@@ -28,7 +28,8 @@ a:hover,
 }
 
 #container {
-    height: 100vh;
+    animation: fadeIn 3s forwards;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 150px 1fr 1fr;
     grid-template-rows: 1fr 1fr 4fr;
@@ -133,8 +134,8 @@ button {
     font-size: 1rem;
     padding: 5px;
     border: 2px solid #f1e9da;
-    background-color: #f1e9da;
-    color: #041f4a;
+    background-color: #041f4a;
+    color: #c70000;
     border-radius: 20px;
 }
 
@@ -202,6 +203,7 @@ em {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .projects-header {
@@ -228,6 +230,7 @@ em {
     font-size: 1.75rem;
     font-weight: bold;
 }
+
 .project-info {
     font-size: 1.25rem;
     display: flex;
@@ -260,6 +263,18 @@ img.project-image {
 
 .projects p {
     margin-top: 2%;
+}
+
+.dot {
+    border: 1px solid #fb8b24;
+}
+
+.dot:hover {
+    background-color: #c70000;
+}
+
+.fill-in {
+    background-color: #fb8b24;
 }
 
 /*__MODAL__*/
