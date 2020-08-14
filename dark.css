@@ -277,6 +277,14 @@ img.project-image {
     background-color: #fb8b24;
 }
 
+.arrow:hover {
+    color: #c70000;
+}
+
+.arrow {
+    color: #fb8b24;
+}
+
 /*__MODAL__*/
 
 .modal-container {
@@ -372,7 +380,13 @@ h5 {
     color: #c70000;
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 1030px) {
+    .project-info {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
     body {
         height: auto;
         background-image: none;

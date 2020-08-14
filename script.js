@@ -73,9 +73,6 @@ function start() {
         I have a degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. Native English-speaker with Intermediate German</br></br>
         `
     );
-    $(".under-construction").html(
-        `<em>Note: This website is still under construction: some "Recent Projects" link to github repositories.</em>`
-    );
 }
 
 function german() {
@@ -91,9 +88,6 @@ function german() {
             </br></br>
             Ich habe einen Abschluss in Bildung und kann 15 Jahre Erfahrung als Politikberaterin und Projektmanagerin im britischen öffentlichen Dienst vorweisen.</br></br>
           `
-    );
-    $(".under-construction").html(
-        `<em> Hinweis: Diese Website befindet sich noch im Aufbau und einige "Aktuelle Projekte" verlinken auf Github Repositories.</em>`
     );
 }
 
