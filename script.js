@@ -19,8 +19,9 @@ $(".cv-text").html(`
 <h5>What I'm doing now (and soon)</h5>
 
     <li>looking for a junior developer role with a fun, friendly, supportive company</li>
-    <li>learning TypeScript</li>
-    <li>digging deeper into Agile</li>
+    <li>learning TypeScript and React Native</li>
+<li>surviving a worldwide pandemic!</li>
+    
 
 <h5>What I've done recently</h5>
 <li>
@@ -30,6 +31,8 @@ $(".cv-text").html(`
 <li>
     successfully completed a 12 week web-dev bootcamp, despite having to
     study remotely due to COVID-19
+</li>
+<li>brushed up on Agile to supplement my existing project management skills
 </li>
 <li>built this website and 
     learned how to set up a GitHub workflow to automatically update the live
