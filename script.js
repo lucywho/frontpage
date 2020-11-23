@@ -1,11 +1,9 @@
-let theme = $("head link#style").attr("href");
-
 $(".self").html(
     '<img src="./assets/lucy.jpg" alt="Lucy Toman profile photo" />'
 );
 $(".name").html("Lucy Toman");
 $(".contact-me").html(
-    `<div id="cv"><i class='far fa-file-alt'></i> More about me</div>
+    `<div class="cv"><i class='far fa-file-alt'></i> More about me</div>
     <a href="https://www.linkedin.com/in/lucytoman/" target="_blank"><i class='fab fa-linkedin'> </i> LinkedIn</a>
     <a href="https://github.com/lucywho" target="_blank"><i class='fab fa-github'> </i> GitHub </a>
     <a href="mailto:lucy.toman+website@gmail.com" target="_blank"><i class="far fa-envelope"> </i> Email </a>
@@ -107,25 +105,30 @@ $(document).ready(function() {
 });
 
 function toggleTheme() {
-    if (theme == "style.css") {
-        theme = "dark.css";
-        $("head link#style").attr("href", theme);
+    $("body, a, button, div, section, em, img").toggleClass("dark");
+    // $("a").toggleClass("dark");
+    // $("button").toggleClass("dark");
+    // $("div").toggleClass("dark");
+    // $("section").toggleClass("dark");
+    // $("em").toggleClass("dark");
+    // $("img").toggleClass("dark");
+    $("h4, h5, p, li").toggleClass("dark");
+
+    if ($(".theme").hasClass("dark")) {
         $(".theme").html(
-            '<button id="theme" onclick="toggleTheme()">☀️</button>'
+            '<button class="colorscheme dark" onclick="toggleTheme()">☀️</button>'
         );
     } else {
-        theme = "style.css";
-        $("head link#style").attr("href", theme);
         $(".theme").html(
-            '<button id="theme" onclick="toggleTheme()">🌒</button>'
+            '<button class="colorscheme" onclick="toggleTheme()">🌒</button>'
         );
     }
 }
 
-$("div#cv").on("click", function(e) {
+$("div.cv").on("click", function(e) {
     $(".modal-container").addClass("vis");
 });
 
-$("#X").on("click", function(e) {
+$(".X").on("click", function(e) {
     $(".modal-container").removeClass("vis");
 });

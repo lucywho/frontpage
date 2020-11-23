@@ -11,20 +11,39 @@ body {
     background-color: #f1e9da;
 }
 
+body.dark {
+    color: #f1e9da;
+    background-color: #041f4a;
+}
+
 a {
     text-decoration: none;
     color: #214e34;
     text-align: center;
 }
 
+a.dark {
+    color: rgb(75, 175, 117);
+}
+
+.cv {
+    color: #214e34;
+    cursor: pointer;
+}
+
+.cv.dark {
+    color: rgb(75, 175, 117);
+    cursor: pointer;
+}
+
 a:hover,
-#cv:hover {
+.cv:hover {
     color: #c70000;
 }
 
-#cv {
-    color: #214e34;
-    cursor: pointer;
+a.dark:hover,
+.cv.dark:hover {
+    color: #fb8b24;
 }
 
 #container {
@@ -42,7 +61,6 @@ a:hover,
     grid-area: pic;
     margin: 1%;
     display: flex;
-
     align-items: center;
 }
 
@@ -57,20 +75,34 @@ a:hover,
     border-radius: 20px;
 }
 
-.name {
-    grid-area: name;
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.self.dark img {
+    border: 5px solid #fb8b24;
+}
 
+.name {
+    align-items: center;
+    background-image: linear-gradient(
+        90deg,
+        transparent 30%,
+        rgba(147, 154, 157, 0.5)
+    );
+    border-radius: 30px;
+    color: #c70000;
+    display: flex;
     font-size: 2.5rem;
     font-weight: bold;
+    grid-area: name;
+    justify-content: center;
+    margin: 1%;
+}
 
-    background-image: linear-gradient(90deg, transparent 20%, #939a9d);
-    border-radius: 30px;
-
-    color: #c70000;
+.name.dark {
+    background-image: linear-gradient(
+        90deg,
+        transparent 20%,
+        rgba(147, 154, 157, 0.9)
+    );
+    color: #fb8b24;
 }
 
 /*__WELCOME MESSAGE__*/
@@ -125,13 +157,20 @@ button {
     border-radius: 20px;
 }
 
+button.dark {
+    background-color: #041f4a;
+    border: 2px solid #f1e9da;
+    color: #c70000;
+}
+
 button:hover,
 button:focus {
     background-color: #c70000;
 }
 
-#theme {
-    background-color: #041f4a;
+button.dark:hover,
+button.dark:focus {
+    background-color: #fb8b24;
 }
 
 #lang {
@@ -149,9 +188,13 @@ button:focus {
     align-items: center;
     text-align: center;
     padding: 2%;
-    background-image: linear-gradient(to bottom left, #f1e9da, #939a9d);
+    background-image: radial-gradient(transparent, rgba(147, 154, 157, 0.5));
     border-radius: 30px;
     font-size: 1.25rem;
+}
+
+.about-me.dark {
+    background-image: radial-gradient(transparent, rgba(147, 154, 157, 0.2));
 }
 
 .contact-me {
@@ -167,19 +210,28 @@ em {
     margin: 1rem 0 0 0;
 }
 
+em.dark {
+    color: #4baf75;
+}
+
 /*__PROJECTS__*/
 
 .project-container {
     grid-area: project-container;
     margin: 1%;
 
-    background-image: linear-gradient(to bottom right, #939a9d, #f1e9da);
+    background-image: radial-gradient(transparent, rgba(147, 154, 157, 0.5));
+
     border-radius: 30px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+}
+
+.project-container.dark {
+    background-image: radial-gradient(transparent, rgba(147, 154, 157, 0.2));
 }
 
 .projects-header {
@@ -233,6 +285,10 @@ img.project-image {
     padding: 2%;
 }
 
+img.project-image.dark {
+    border: 5px solid #f1e9da;
+}
+
 .project-description {
     padding: 0 20px 0 10px;
 }
@@ -245,20 +301,40 @@ img.project-image {
     border: 1px #c70000 solid;
 }
 
+.dot.dark {
+    border: 1px solid #fb8b24;
+}
+
 .dot:hover {
     background-color: #fb8b24;
+}
+
+.dot.dark:hover {
+    background-color: #c70000;
 }
 
 .fill-in {
     background-color: #c70000;
 }
 
+.fill-in.dark {
+    background-color: #fb8b24;
+}
+
 .arrow {
     color: #c70000;
 }
 
+.arrow.dark {
+    color: #fb8b24;
+}
+
 .arrow:hover {
     color: #fb8b24;
+}
+
+.arrow.dark:hover {
+    color: #c70000;
 }
 
 /*__MODAL__*/
@@ -274,6 +350,10 @@ img.project-image {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.modal-container.dark {
+    background-color: rgba(241, 233, 218, 0.35);
 }
 
 .vis {
@@ -294,7 +374,11 @@ img.project-image {
     font-size: 2rem;
 }
 
-#modal-x {
+.cv-modal.dark {
+    background-color: #041f4a;
+}
+
+.modal-x {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -302,7 +386,7 @@ img.project-image {
     width: 100%;
 }
 
-#X {
+.X {
     color: #c70000;
     cursor: pointer;
     font-size: 2rem;
@@ -310,8 +394,16 @@ img.project-image {
     padding-right: 10px;
 }
 
-#X:hover {
+.X.dark {
     color: #fb8b24;
+}
+
+.X:hover {
+    color: #fb8b24;
+}
+
+.X.dark:hover {
+    color: #c70000;
 }
 
 .modal-text {
@@ -334,18 +426,23 @@ h4 {
     color: #c70000;
 }
 
-li {
-    margin: 1% 0 1% 2%;
-}
-
 h5 {
     font-size: 1.25rem;
     color: #c70000;
     margin: 2% 0 1% 0;
 }
 
+li {
+    margin: 1% 0 1% 2%;
+}
+
 .print h4 {
     margin-top: 2%;
+}
+
+h4.dark,
+h5.dark {
+    color: #fb8b24;
 }
 
 .print a {
@@ -354,6 +451,10 @@ h5 {
 
 .print a:hover {
     color: #fb8b24;
+}
+
+.print.dark a:hover {
+    color: #c70000;
 }
 
 @media screen and (max-width: 1030px) {
