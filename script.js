@@ -57,7 +57,7 @@ $(".cv-text").html(`
 `);
 
 $(".print").html(
-    `<h4>About me: the long version</h4><a href="./assets/LucyTomanCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (opens in a new tab)</a></p>`
+    `<h4>About me: the long version</h4><a href="./assets/LucyTomanCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (pdf, opens in a new tab)</a></p>`
 );
 
 $(".theme").html('<button id="theme" onclick="toggleTheme()">🌒</button>');
@@ -106,12 +106,7 @@ $(document).ready(function() {
 
 function toggleTheme() {
     $("body, a, button, div, section, em, img").toggleClass("dark");
-    // $("a").toggleClass("dark");
-    // $("button").toggleClass("dark");
-    // $("div").toggleClass("dark");
-    // $("section").toggleClass("dark");
-    // $("em").toggleClass("dark");
-    // $("img").toggleClass("dark");
+
     $("h4, h5, p, li").toggleClass("dark");
 
     if ($(".theme").hasClass("dark")) {
