@@ -4,272 +4,66 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link id="style" rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="carousel.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-        />
 
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link id="style" rel="stylesheet" href="style.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mate&family=Nunito+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+        <script
+            src="https://kit.fontawesome.com/1c9245f22b.js"
+            crossorigin="anonymous"
+        ></script>
 
         <title>Lucy Toman</title>
     </head>
     <body>
-        <div id="container">
-            <div class="pic">
-                <div class="self"></div>
-            </div>
-            <div class="name"></div>
-            <section class="welcome">
-                <div class="text"></div>
-                <div class="choice">
-                    <div class="lang"></div>
-                    <div class="theme"></div>
-                </div>
-            </section>
-            <section class="about-me">
-                <div class="about-me-text"></div>
-                <div class="contact-me"></div>
-            </section>
-            <section class="project-container">
-                <div class="projects-header"></div>
-                <div id="carousel" class="projects">
-                    <div class="project onscreen">
-                        <a
-                            href="https://prepositioner.herokuapp.com"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Prepositioner
-                                </div>
-
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/PP-logo.png"
-                                        class="project-image"
-                                    />
-                                </div>
-
-                                <div class="project-description">
-                                    Test your knowledge of German prepositions!
-                                    Delivers 10 random questions each time, with
-                                    the option to try again or to see the
-                                    correct answer. Keeps score and gives
-                                    positive feedback.
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    SPA built in React.js with a PostgreSQL
-                                    database.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="https://qiras-folk.herokuapp.com/welcome#/"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Qira's Folk
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/QFlogo.png"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    Social Network SPA: Make friends, chat, and
-                                    see who's new.
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    Built in React.js and Redux, with a chat
-                                    room using Socket.io, and a PostgreSQL
-                                    database.
-                                </div>
-                                <div class="project-description">
-                                    Image hosting with AWS S3, and AWS SES email
-                                    management for password resets.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="http://whoforall.herokuapp.com/"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Who For All!
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/whoforall.png"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    A fun petition site! Sign up to register
-                                    your support for Doctor Who to be shown on
-                                    all terrestrial TV channels across the
-                                    world! Sign using the mouse or finger, add
-                                    personal details, and see who else signed!
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    Built with Handlebars and a PostgreSQL
-                                    database.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="https://imaginary-realities.herokuapp.com/"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Imaginary Realities
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/lagoonsq.png"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    Hubble-themed image board. Upload your own
-                                    images and comment on other pictures.
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    SPA built in Vue.js with a PostgreSQL
-                                    database, using AWS S3 for image storage.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="https://github.com/lucywho/Science-tweets-ticker"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Science Ticker
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/scitwittick.png"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    Delivers the latest tweets from Nature,
-                                    Science Magazine, and New Scientist and
-                                    displays them in a scrolling "ticker tape"
-                                </div>
-                                <div class="project-description">
-                                    Uses ajax to request information from the
-                                    Twitter API. Built with node.js and express.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="https://frontend-minis.herokuapp.com/"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Front End Minis
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/miniport.png"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    Connect4! A Carousel of Cats! Search
-                                    Spotify! ... and more!
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    A portfolio site built with Handlebars,
-                                    showcasing half a dozen small projects
-                                    written in JavaScript and jQuery.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a
-                            href="https://crounter.herokuapp.com/"
-                            target="_blank"
-                        >
-                            <div class="project-info">
-                                <div class="project-name">
-                                    Crounter
-                                </div>
-                                <div class="image-box">
-                                    <img
-                                        src="./assets/crochet-stitches.jpg"
-                                        class="project-image"
-                                    />
-                                </div>
-                                <div class="project-description">
-                                    A multi-functional counter for crochet
-                                    projects
-                                </div>
-                                <br />
-                                <div class="project-description">
-                                    Allows the user to count rows, stitches and
-                                    pattern repeats in a single screen. Option
-                                    to count stitches in multiples of the users
-                                    choice to reduce screen taps while working.
-                                    Built in React with hooks.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div id="dots">
-                        <div id="left" class="arrow">◄</div>
-                        <div class="dot fill-in"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div id="right" class="arrow">►</div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div class="modal-container">
-            <div class="cv-modal">
-                <div class="modal-x">
-                    <p class="X">X</p>
-                </div>
-                <div class="modal-text">
-                    <div class="modal-name"></div>
-                    <div class="cv-text"></div>
-                    <div class="print"></div>
+        <div id="top">
+            <div id="banner">Lucy's Code</div>
+            <div id="info">
+                <div id="strapline"></div>
+                <div class="links">
+                    <div class="full" onclick="showFullstack()">Full Stack Projects</div>
+                    <div class="front" onclick="showFront()">Front End Projects</div>
+                    <div class="crochet" onclick="showCrochet()">Crochet</div>
+                    <div class="blog" onclick="showBlog()">Blog</div>
+                    <div class="home" onclick="defaultCon()">Home</div>
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="script.js"></script>
-        <script src="carousel.js"></script>
+        </div>
+        <div id="side">
+            <div id="contact">
+                <div id="cv" onclick="toggleCv()">
+                    </div>
+                <div class="">
+                    <a href="https://www.linkedin.com/in/lucytoman/" target="_blank"><i class="fab fa-linkedin"> </i> LinkedIn</a>
+                </div>
+                <div class=""><a href="https://github.com/lucywho" target="_blank"><i class="fab fa-github"> </i> GitHub</a>
+                </div>
+                <div class="">
+                    <a id="email-wrapper" href="mailto:lucy.toman+website@gmail.com" target="_blank">
+                        <i class="far fa-envelope"> </i> 
+                            <div id="email">email</div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="format">
+                    <div><button id="lang" onclick="toggleLang()"></button></div>
+                    <div><button id="theme"  onclick="toggleTheme()"></button></div>
+                </div>
+                <div id="impress" onclick="showImpress()">impressum</div>
+            </div>
+        </div>
+
+        <div id="contents">  
+        </div>
+    </div>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+    
 </html>

@@ -1,129 +1,414 @@
-$(".self").html(
-    '<img src="./assets/lucy.jpg" alt="Lucy Toman profile photo" />'
-);
-$(".name").html("Lucy Toman");
-$(".contact-me").html(
-    `<div class="cv"><i class='far fa-file-alt'></i> More about me</div>
-    <a href="https://www.linkedin.com/in/lucytoman/" target="_blank"><i class='fab fa-linkedin'> </i> LinkedIn</a>
-    <a href="https://github.com/lucywho" target="_blank"><i class='fab fa-github'> </i> GitHub </a>
-    <a href="mailto:lucy.toman+website@gmail.com" target="_blank"><i class="far fa-envelope"> </i> Email </a>
-    `
-);
+$(document).ready(function () {
+    english();
 
-$(".modal-name").html(`<p class="name">Lucy Toman</p>`);
+    defaultCon();
 
-$(".cv-text").html(`
-<h4>About me: the short version</h4>
-<h5>What I'm doing now (and soon)</h5>
+    language = "en";
+    curvita = false;
 
-    <li>looking for a junior developer role with a fun, friendly, supportive company</li>
-    <li>learning TypeScript and React Native</li>
-<li>surviving a worldwide pandemic!</li>
-    
+    $("#theme").html("☀️");
+});
 
-<h5>What I've done recently</h5>
-<li>
-    took a career break and realised that I had an opportunity to return to
-    my first love of coding
-</li>
-<li>
-    successfully completed a 12 week web-dev bootcamp, despite having to
-    study remotely due to COVID-19
-</li>
-<li>brushed up on Agile to supplement my existing project management skills
-</li>
-<li>built this website and 
-    learned how to set up a GitHub workflow to automatically update the live
-    website with new commits
-</li>
-<h5>What I used to do</h5>
+let proj;
+let curvita;
+let language;
 
-    15 years with the UK civil service gave me fantastic experience of:
-    <li>working under pressure to meet legal and regulatory deadlines</li>
-    <li>
-        keeping the big picture in mind while sweating the details: making
-        sure legislation does what its supposed to even in the edge cases
-    </li>
-    <li>
-        building consensus amoung interest groups with apparently
-        contradictory wishes to create policies and laws that everyone can
-        live with
-    </li>
-    <li>
-        living with change: whether its a new government with a radically
-        different agenda, a complete reorganisation of the department, or
-        frequently changing and reforming teams
-    </li>
-`);
+//DATA
 
-$(".print").html(
-    `<h4>About me: the long version</h4><a href="./assets/LucyTomanCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (pdf, opens in a new tab)</a></p>`
-);
+const allProjects = {
+    front: [
+        {
+            name: "The Peopleiser",
+            image: "./assets/peopleiser.png",
+            link: "https://people-iser.netlify.app/",
+            description:
+                "An app for visualising large numbers of people by putting them in vehicles (or Olympiastadion!).",
+            tech: "Keeping it simple with HTML, CSS, & jQuery",
+        },
+        {
+            name: "Crounter",
+            image: "./assets/crounter.png",
+            link: "https://crounter.netlify.app/",
+            description:
+                "Solving one of my own problems with an app that helps the user keep track of stitches, rows and pattern repeats on a single screen",
+            tech: "React.js hooks",
+        },
+        {
+            name: "Lucysco.de",
+            image: "assets/web3.png",
+            link: "https://lucysco.de",
+            description:
+                "Personal website, with portfolios of my code and crochet projects. This was an exercise in building a lightweight, single-page site without using a framework. Balancing simplicity with functionality has been an interesting discipline, especially when it comes to accessing data objects.",
+            tech: "HTML, CSS, jQuery",
+        },
+        {
+            name: "Science Tweets",
+            image: "./assets/scitwittick.png",
+            link: "https://science-ticker.herokuapp.com/",
+            description:
+                "Gets data from the Twitter API to deliver the latest tweets from New Scientist, Scientific American, and Nature, ticker-tape style",
+            tech: "node.js, express",
+        },
 
-$(".theme").html('<button id="theme" onclick="toggleTheme()">🌒</button>');
+        {
+            name: "txet-mess",
+            image: "./assets/txet-mess.png",
+            link: "https://txet-mess.netlify.app/",
+            description:
+                "It is a meme universally acknowledged that a word in possession of all its letters can still be easily read if the middle letters are scrambled, because the human brain reads the whole word not the individual letters...",
+            tech: "Old school vanilla JavaScript",
+        },
+        {
+            name: "Connect 4",
+            image: "./assets/connect4.png",
+            link: "https://connect4-purple.netlify.app/",
+            description:
+                "The classic game, but in hideous colours.</br> This is why you need to employ real designers.",
+            tech: "HTML, CSS, jQuery",
+        },
+    ],
+    full: [
+        {
+            name: "Qira's Folk",
+            image: "./assets/QFlogo.png",
+            link: "https://github.com/lucywho/qiras-folk#qirasfolk",
+            description:
+                "Social Network SPA: Make friends, chat, and see who's new.",
+            tech: "Built in React.js using Redux, Socket.io, and a PostgreSQL database.",
+        },
+        {
+            name: "Imaginary Realities",
+            image: "./assets/lagoonsq.png",
+            link: "https://github.com/lucywho/imaginary-realities#imageboard",
+            description:
+                "Hubble-themed image board. Upload your own images and comment on other pictures.",
+            tech: "SPA built in Vue.js with a PostgreSQL database, using AWS S3 for image storage.",
+        },
+        {
+            name: "Prepositioner",
+            image: "./assets/PP-logo.png",
+            link: "https://github.com/lucywho/prepositioner",
+            description:
+                "Test your knowledge of German prepositions! Delivers 10 random questions each time, with the option to try again or to see the correct answer. Keeps score and gives positive feedback",
+            tech: "SPA built in React.js with a PostgreSQL database",
+        },
+        {
+            name: "Who For All!",
+            image: "./assets/whoforall.png",
+            link: "https://github.com/lucywho/who-for-all#who-for-all",
+            description:
+                "A fun petition site! Sign up to register your support for Doctor Who to be shown on all terrestrial TV channels across the world! Sign using the mouse or finger, add personal details, and see who else signed!",
+            tech: "Built with Handlebars and a PostgreSQL database.",
+        },
+    ],
+    crochet: [
+        {
+            name: "My First Blanket",
+            stitch: "classic granny squares",
+            image: "./assets/crochet/first-throw-dog.jpg",
+            material: "acrylic",
+            pattern: { link: "", description: "" },
+            description:
+                "This was my first ever crochet project. It's badly made, the tension is all over the place, and the joins are ... idiosyncratic. But Old Dog loved it.",
+        },
+        {
+            name: "Huge Throw",
+            stitch: "granny squares and clusters",
+            image: "assets/crochet/big-throw.jpg",
+            material: "acrylic",
+            pattern: { link: "", description: "" },
+            description:
+                "A huge improvement of my first attempt. By this point, I'd got the hang of the join-as-you-go method and was much more confident about mixing up stitches: hence the stripes of cluster stitches between the panels of granny squares.",
+        },
+        {
+            name: "Dog Jumper",
+            stitch: "houndstooth stitch",
+            image: "assets/crochet/dog-jumper.jpg",
+            material: "acrylic",
+            pattern: {
+                link: "https://www.yarnspirations.com/red-heart-crochet-houndstooth-dog-sweater/RHC0729-030152M.html",
+                description: "Yarnspirations Houndstooth Dog Sweater",
+            },
+            description:
+                "Old Dog was starting to feel the cold so I made her a jumper, heavily adapted from the free Yarnspirations pattern. As you can see, she was thrilled.",
+        },
 
-function start() {
-    $(".projects-header").html("Recent Projects");
-    $(".text").html("Welcome to my website!");
-    $(".lang").html(
-        '<button id="lang" class="de" onclick="toggleLang()">🇩🇪</button>'
+        {
+            name: "Autumn Tunic",
+            stitch: "crosshatch stitch",
+            image: "assets/crochet/autumn-tunic.JPG",
+            material: "Ice Yarns Gonca",
+            pattern: {
+                link: "https://www.ravelry.com/patterns/library/slanted-squares-sweater",
+                description: "Slanted Squares Sweater",
+            },
+            description:
+                "This pattern from CroJennifer on Ravelry is easy and interesting to make - a rare combination! I loved it so much that I also made versions in green, pink, and blue for various family members. This was the first one that I kept for myself.",
+        },
+        {
+            name: "With A Little Help From My Friends",
+            stitch: "various stitches",
+            image: "assets/crochet/walhfmf-throw.JPG",
+            material: "Ice Yarns Gonca",
+            pattern: {
+                link: `https://www.hookedonsunshine.co/little-help-from-my-friends-cal`,
+                description: "With a little help from my friends CAL",
+            },
+            description:
+                "I made this Crochet-Along blanket from Hooked on Sunshine for my husband. It incorporates a fascinating selection of stitches and techniques; most of which I hadn't used before. It was a lot of fun to make.",
+        },
+        {
+            name: "Big X",
+            stitch: "classic granny squares",
+            image: "assets/crochet/multicoloured-x-throw.jpg",
+            material: "Stylecraft Special DK ",
+            pattern: { link: "", description: "" },
+            description:
+                "I bought an enormous lot of yarn off ebay and this was what was left over after making two jumpers.",
+        },
+        {
+            name: "Side-to-Side Sweater",
+            stitch: "double, half-treble, and cross-stitches",
+            image: "assets/crochet/side-to-side-sweater.JPG",
+            material: "Ice Yarns self-striping acrylic",
+            pattern: { link: "", description: "" },
+            description:
+                "The problem with self-striping yarns and conventional patterns is that you always get horizontal stripes. I really wanted vertical stripes so I designed this pattern, which is worked from side to side, along the full length of the front and back, in alternating rows of double, half treble and cross-stitch, and trimmed with half trebles around the neckline.",
+        },
+        {
+            name: "Sunflower Cardigan",
+            stitch: "sunflower granny squares",
+            image: "assets/crochet/sunflower-cardigan.JPG",
+            material: "Ice Yarns Gonca",
+            pattern: { link: "", description: "" },
+            description:
+                "My daughter saw a picture online and asked if I could make her one of these. 'Of course', I said, before discovering that the creator had made it free-hand and there was no pattern! So, after a fair bit of trial and error, I managed to put it together myself, using the flat braid joining method and alternating front- and back- post trebles for the ribbing",
+        },
+        {
+            name: "The Cat Arse Throw",
+            stitch: "harlequin stitch",
+            image: "assets/crochet/cat-arse-throw.JPG",
+            material: "Ice Yarns Favourite acrylic",
+            pattern: { link: "", description: "" },
+            description:
+                "I decided to use up some of my yarn stash and try out a new stitch... All I can say is, harlequin stitch is fun to crochet but don't do it in pink.",
+        },
+    ],
+};
+
+//FUNCTIONS
+
+function defaultCon() {
+    $("#contents").html(
+        `<div class="soon cont-default"><h2>Welcome to my website</h2></br></br><p>A gallery of stuff that I'm doing or thinking about</p>
+        </br><p>Take a look around and get in touch!</p>
+     </div>`
     );
+}
 
-    $(".about-me-text").html(
-        `<strong>HIRE ME!</strong></br></br>I'm a recent graduate of <a href="https://www.spiced-academy.com/en/" target="_blank">Spiced Academy</a>'s full stack web development course. I write in vanilla JavaScript and jQuery, with Node.js. I have built projects using Handlebars, Vue and React, and have created databases with postgreSQL. Now I'm looking for new challenges as a junior developer.</br></br>
-        I have a degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. Native English-speaker with Intermediate German</br></br>
-        `
+function english() {
+    $("#strapline").html(
+        `<div class="strap1">full stack web dev</div><div class="strap2">project manager</div><div class="strap3">crochet addict</>`
     );
+    $(".full").html("Full Stack Projects");
+    $(".front").html("Front End Projects");
+    $(".crochet").html("Crochet");
+    $(".home").html("Home");
+    $("#cv").html(`<i class="far fa-file-alt"></i><strong> about me</strong>`);
+    $("#email").html(`email`);
+    $("#lang").html("🇩🇪");
 }
 
 function german() {
-    $(".projects-header").html("Aktuelle Projekte");
-    $(".text").html("Wilkommen auf meiner Website!");
-
-    $(".lang").html(
-        '<button id="lang" class="en" onclick="toggleLang()">🇬🇧</button> '
+    $("#strapline").html(
+        `<div class="strap1">full stack web dev</div><div class="strap2">projektleiterin</div><div class="strap3">häkelsüchtige</>`
     );
+    $("#cv").html(`<i class="far fa-file-alt"></i><strong> über mich</strong>`);
+    $("#email").html(`E-mail`);
+    $(".full").html("Full-Stack Projekte");
+    $(".front").html("Front-End Projekte");
+    $(".crochet").html("Häckeln");
+    $(".home").html("Startseite");
 
-    $(".about-me-text").html(
-        `<strong>Ich bin die Richtige für Ihr Team!</strong></br></br>Ich habe den Full-Stack-Web-Developer-Kurs der <a href="https://www.spiced-academy.com/de/" target="_blank">Spiced Academy</a> absolviert. Ich schreibe in Vanilla JavaScript und jQuery mit Node.js. Ich habe Projekte mit Handlebars, Vue und React sowie Datenbanken mit PostgreSQL erstellt. Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
+    $("#lang").html("🇬🇧");
+}
+
+function setProjects() {
+    $("#contents").html(`<div id="projwrap"></div>`);
+
+    for (i = 0; i < proj.length; i++) {
+        let title = proj[i].name;
+        let link = proj[i].link;
+        let image = proj[i].image;
+        let description = proj[i].description;
+        let tech = proj[i].tech;
+
+        if ($("#contents").hasClass("light")) {
+            let chunk = `<div id="${i}" class="project">   
+                <a class="light" href=${link} target= _blank>
+                    <h2 style="padding: 10px 0">${title}</h2>
+                    <div id="image">
+                        <img src=${image} alt="image for ${title} project" >
+                    </div>
+                    <div style="padding:10px 0">${description}</div>
+                    <div>${tech}</div>
+                </a>
+            </div> `;
+
+            $("#projwrap").append(chunk);
+        } else {
+            let chunk = `<div id="${i}" class="project">   
+                <a href=${link} target= _blank>
+                    <h2 style="padding: 10px 0">${title}</h2>
+                    <div id="image">
+                        <img src=${image} alt="image for ${title} project" >
+                    </div>
+                    <div style="padding:10px 0">${description}</div>
+                    <div>${tech}</div>
+                </a>
+            </div> `;
+
+            $("#projwrap").append(chunk);
+        }
+    }
+}
+
+function showFullstack() {
+    curvita = false;
+    proj = allProjects.full;
+    setProjects(proj);
+}
+
+function showFront() {
+    curvita = false;
+    proj = allProjects.front;
+    setProjects(proj);
+}
+
+function showCrochet() {
+    curvita = false;
+    $("#contents").html(`<div id="projwrap"></div>`);
+    let croch = allProjects.crochet;
+
+    for (i = 0; i < croch.length; i++) {
+        let title = croch[i].name;
+        let stitch = croch[i].stitch;
+        let image = croch[i].image;
+        let material = croch[i].material;
+        let pattern = croch[i].pattern;
+        let description = croch[i].description;
+
+        if ($("#contents").hasClass("light")) {
+            let chunk = `<div class="project">   
+                    <h2 style="padding: 10px 0">${title}</h2>
+                    <div id="image">
+                        <img src=${image} alt="image for ${title} project" >
+                    </div>
+                    <a class="light" href="${pattern.link}">${pattern.description}</a>
+                    <div>Made from ${material} yarn using ${stitch}</div>
+                    <div style="padding:10px 0">${description}</div>
+                
+            </div> `;
+
+            $("#projwrap").append(chunk);
+        } else {
+            let chunk = `<div class="project">   
+        <h2 style="padding: 10px 0">${title}</h2>
+        <div id="image">
+            <img src=${image} alt="image for ${title} project" style="object-fit: cover">
+        </div>
+        <a href="${pattern.link}">${pattern.description}</a>
+        <div>Made from ${material} yarn using ${stitch}</div>
+        <div style="padding:10px 0">${description}</div>
+    
+</div> `;
+
+            $("#projwrap").append(chunk);
+        }
+    }
+    let copy = `<div style="font-size: 0.75rem; text-align: right">all images: &copy; Lucy Toman 2022</div>`;
+    $("#projwrap").append(copy);
+}
+
+function showBlog() {
+    curvita = false;
+    $("#contents").html(`<div class="soon">Blog Coming Soon</div>`);
+}
+
+function toggleCv() {
+    if (language === "en") {
+        $("#contents").html(`<h4>About me</h4>
+    <br/>
+    <strong>Junior full stack web developer. </strong>I have built projects using Handlebars, Vue and React, and created databases with postgreSQL.</br>
+    I have a bachelors degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. <br/>I'm a native speaker of British English with intermediate German (CEFR level: B2).
+    <br/> <br/>
+    <h5>What I'm doing now</h5>
+    &centerdot; learning Next.js, tailwindcss, and Prisma<br/>
+    &centerdot; looking for a junior developer role with a fun, friendly, supportive company
+       <br/><br/>
+    <h5>What I've done recently</h5>
+    &centerdot; completely rebuilt this website with a new design and simpler code, and deployed it using GitHub workflow to automatically update the live website with new commits
+    <br/>
+    &centerdot; studied German to B2 level<br/>
+    &centerdot; started a web-dev bootcamp to learn new skills<br/>
+    <br/>
+    <h5>What I used to do</h5>
+    I spend 15 years working as a project manager, policy advisor and team leader with the UK civil service. This gave me fantastic experience of:<br/>
+    &centerdot; working under pressure to meet legal and regulatory deadlines<br/>
+    &centerdot; keeping the big picture in mind while sweating the details: making sure the final product does what its supposed to even in the edge cases<br/>
+    &centerdot; building consensus among interest groups with apparently contradictory wishes in order to create outcomes that everyone can live with
+    <br/>
+    &centerdot; living with change: new management teams with new agendas, radical reorganisations of the department, and frequently changing and reforming teams to meet rapidly changing external requirements
+        <br/><br/>
+        <a href="./assets/LucyToman_webCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (opens in a new tab)</a>
+    `);
+    } else {
+        $("#contents").html(`<h4>Über mich</h4>
+                <br/>
+                <strong>Junior Full-Stack-Entwickler</strong></br></br>Ich habe einen Full-Stack-Web-Developer-Kurs absolviert, und ich habe Projekte mit Handlebars, Vue und React sowie Datenbanken mit PostgreSQL erstellt. </br></br>Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
             </br></br>
-            Ich habe einen Abschluss in Bildung und kann 15 Jahre Erfahrung als Politikberaterin und Projektmanagerin im britischen öffentlichen Dienst vorweisen.</br></br>
-          `
-    );
+            Ich habe einen Abschluss in Pädagogik und kann 15 Jahre Erfahrung als Politikberaterin und Projektleiterin im britischen öffentlichen Dienst vorweisen.</br></br>
+          `);
+    }
+    curvita = true;
+}
+
+function showImpress() {
+    curvita = false;
+    $("#contents")
+        .html(`<div class="center-impress"><div class="center-impress"><h4>Impressum</h4>
+    <br/>
+    <h6>Website designed and built by:</h6>Lucy Toman<br/>
+    Wildhüterweg 25, 12353 Berlin<br/>
+    lucy@toman.me.uk
+    <br/>
+    <h6>Steuernummer</h6>DE320203693<br/>
+    <h6>Registrierte Mitgliedschaften</h6>Industrie - und Handelsksmmer zu Berlin<br/>
+    </div></div>
+    `);
 }
 
 function toggleLang() {
-    if ($(".de")[0]) {
+    if (language === "en") {
         german();
+        language = "de";
     } else {
-        start();
+        english();
+        language = "en";
+    }
+
+    if (curvita) {
+        toggleCv();
     }
 }
-
-$(document).ready(function() {
-    start();
-});
-
 function toggleTheme() {
-    $("body, a, button, div, section, em, img").toggleClass("dark");
+    $("body, button, div, img, a").toggleClass("light");
 
-    $("h4, h5, p, li").toggleClass("dark");
+    $("h4, h5, p, li").toggleClass("light");
 
-    if ($(".theme").hasClass("dark")) {
-        $(".theme").html(
-            '<button class="colorscheme dark" onclick="toggleTheme()">☀️</button>'
-        );
+    if ($("#theme").hasClass("light")) {
+        $("#theme").html("🌒");
     } else {
-        $(".theme").html(
-            '<button class="colorscheme" onclick="toggleTheme()">🌒</button>'
-        );
+        $("#theme").html("☀️");
     }
 }
-
-$("div.cv").on("click", function(e) {
-    $(".modal-container").addClass("vis");
-});
-
-$(".X").on("click", function(e) {
-    $(".modal-container").removeClass("vis");
-});
