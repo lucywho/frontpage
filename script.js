@@ -132,6 +132,15 @@ const allProjects = {
             description:
                 "Old Dog was starting to feel the cold so I made her a jumper, heavily adapted from the free Yarnspirations pattern. As you can see, she was thrilled.",
         },
+        {
+            name: "Blue Lemon Jumper",
+            stitch: "lemon peel stitch",
+            image: "assets/crochet/blue-stripes.jpg",
+            material: "Stylecraft Special DK",
+            pattern: { link: "", description: "" },
+            description:
+                "I bought an enormous lot of yarn off eBay. There were only 2 balls of each shade, so stripy projects were the answer! I made this jumper and one in shades of pink.",
+        },
 
         {
             name: "Autumn Tunic",
@@ -164,7 +173,7 @@ const allProjects = {
             material: "Stylecraft Special DK ",
             pattern: { link: "", description: "" },
             description:
-                "I bought an enormous lot of yarn off ebay and this was what was left over after making two jumpers.",
+                "This was made with the leftovers from a huge eBay parcel of assorted yarn.",
         },
         {
             name: "Side-to-Side Sweater",
