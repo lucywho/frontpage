@@ -1,17 +1,17 @@
 $(document).ready(function () {
-    english();
+    english()
 
-    defaultCon();
+    defaultCon()
 
-    language = "en";
-    curvita = false;
+    language = "en"
+    curvita = false
 
-    $("#theme").html("☀️");
-});
+    $("#theme").html("☀️")
+})
 
-let proj;
-let curvita;
-let language;
+let proj
+let curvita
+let language
 
 //DATA
 
@@ -91,6 +91,14 @@ const allProjects = {
             description:
                 "Test your knowledge of German prepositions! Delivers 10 random questions each time, with the option to try again or to see the correct answer. Keeps score and gives positive feedback",
             tech: "SPA built in React.js with a PostgreSQL database",
+        },
+        {
+            name: "JobAwesome",
+            image: "./assets/jobawesome.png",
+            link: "http://job-board-red.vercel.app/",
+            description:
+                "Find your place! Find your people! Companies can post jobs and applicants can apply directly through the app.",
+            tech: "NextJS and Tailwindcss, with Prisma and a PostgreSQL database",
         },
         {
             name: "Who For All!",
@@ -203,7 +211,7 @@ const allProjects = {
                 "I decided to use up some of my yarn stash and try out a new stitch... All I can say is, harlequin stitch is fun to crochet but don't do it in pink.",
         },
     ],
-};
+}
 
 //FUNCTIONS
 
@@ -212,45 +220,45 @@ function defaultCon() {
         `<div class="soon cont-default"><h2>Welcome to my website</h2></br></br><p>A gallery of stuff that I'm doing or thinking about</p>
         </br><p>Take a look around and get in touch!</p>
      </div>`
-    );
+    )
 }
 
 function english() {
     $("#strapline").html(
         `<div class="strap1">full stack web dev</div><div class="strap2">project manager</div><div class="strap3">crochet addict</>`
-    );
-    $(".full").html("Full Stack Projects");
-    $(".front").html("Front End Projects");
-    $(".crochet").html("Crochet");
-    $(".home").html("Home");
-    $("#cv").html(`<i class="far fa-file-alt"></i><strong> about me</strong>`);
-    $("#email").html(`email`);
-    $("#lang").html("🇩🇪");
+    )
+    $(".full").html("Full Stack Projects")
+    $(".front").html("Front End Projects")
+    $(".crochet").html("Crochet")
+    $(".home").html("Home")
+    $("#cv").html(`<i class="far fa-file-alt"></i><strong> about me</strong>`)
+    $("#email").html(`email`)
+    $("#lang").html("🇩🇪")
 }
 
 function german() {
     $("#strapline").html(
         `<div class="strap1">full stack web dev</div><div class="strap2">projektleiterin</div><div class="strap3">häkelsüchtige</>`
-    );
-    $("#cv").html(`<i class="far fa-file-alt"></i><strong> über mich</strong>`);
-    $("#email").html(`E-mail`);
-    $(".full").html("Full-Stack Projekte");
-    $(".front").html("Front-End Projekte");
-    $(".crochet").html("Häckeln");
-    $(".home").html("Startseite");
+    )
+    $("#cv").html(`<i class="far fa-file-alt"></i><strong> über mich</strong>`)
+    $("#email").html(`E-mail`)
+    $(".full").html("Full-Stack Projekte")
+    $(".front").html("Front-End Projekte")
+    $(".crochet").html("Häckeln")
+    $(".home").html("Startseite")
 
-    $("#lang").html("🇬🇧");
+    $("#lang").html("🇬🇧")
 }
 
 function setProjects() {
-    $("#contents").html(`<div id="projwrap"></div>`);
+    $("#contents").html(`<div id="projwrap"></div>`)
 
     for (i = 0; i < proj.length; i++) {
-        let title = proj[i].name;
-        let link = proj[i].link;
-        let image = proj[i].image;
-        let description = proj[i].description;
-        let tech = proj[i].tech;
+        let title = proj[i].name
+        let link = proj[i].link
+        let image = proj[i].image
+        let description = proj[i].description
+        let tech = proj[i].tech
 
         if ($("#contents").hasClass("light")) {
             let chunk = `<div id="${i}" class="project">   
@@ -262,9 +270,9 @@ function setProjects() {
                     <div style="padding:10px 0">${description}</div>
                     <div>${tech}</div>
                 </a>
-            </div> `;
+            </div> `
 
-            $("#projwrap").append(chunk);
+            $("#projwrap").append(chunk)
         } else {
             let chunk = `<div id="${i}" class="project">   
                 <a href=${link} target= _blank>
@@ -275,37 +283,37 @@ function setProjects() {
                     <div style="padding:10px 0">${description}</div>
                     <div>${tech}</div>
                 </a>
-            </div> `;
+            </div> `
 
-            $("#projwrap").append(chunk);
+            $("#projwrap").append(chunk)
         }
     }
 }
 
 function showFullstack() {
-    curvita = false;
-    proj = allProjects.full;
-    setProjects(proj);
+    curvita = false
+    proj = allProjects.full
+    setProjects(proj)
 }
 
 function showFront() {
-    curvita = false;
-    proj = allProjects.front;
-    setProjects(proj);
+    curvita = false
+    proj = allProjects.front
+    setProjects(proj)
 }
 
 function showCrochet() {
-    curvita = false;
-    $("#contents").html(`<div id="projwrap"></div>`);
-    let croch = allProjects.crochet;
+    curvita = false
+    $("#contents").html(`<div id="projwrap"></div>`)
+    let croch = allProjects.crochet
 
     for (i = 0; i < croch.length; i++) {
-        let title = croch[i].name;
-        let stitch = croch[i].stitch;
-        let image = croch[i].image;
-        let material = croch[i].material;
-        let pattern = croch[i].pattern;
-        let description = croch[i].description;
+        let title = croch[i].name
+        let stitch = croch[i].stitch
+        let image = croch[i].image
+        let material = croch[i].material
+        let pattern = croch[i].pattern
+        let description = croch[i].description
 
         if ($("#contents").hasClass("light")) {
             let chunk = `<div class="project">   
@@ -317,9 +325,9 @@ function showCrochet() {
                     <div>Made from ${material} yarn using ${stitch}</div>
                     <div style="padding:10px 0">${description}</div>
                 
-            </div> `;
+            </div> `
 
-            $("#projwrap").append(chunk);
+            $("#projwrap").append(chunk)
         } else {
             let chunk = `<div class="project">   
         <h2 style="padding: 10px 0">${title}</h2>
@@ -330,25 +338,25 @@ function showCrochet() {
         <div>Made from ${material} yarn using ${stitch}</div>
         <div style="padding:10px 0">${description}</div>
     
-</div> `;
+</div> `
 
-            $("#projwrap").append(chunk);
+            $("#projwrap").append(chunk)
         }
     }
-    let copy = `<div style="font-size: 0.75rem; text-align: right">all images: &copy; Lucy Toman 2022</div>`;
-    $("#projwrap").append(copy);
+    let copy = `<div style="font-size: 0.75rem; text-align: right">all images: &copy; Lucy Toman 2022</div>`
+    $("#projwrap").append(copy)
 }
 
 function showBlog() {
-    curvita = false;
-    $("#contents").html(`<div class="soon">Blog Coming Soon</div>`);
+    curvita = false
+    $("#contents").html(`<div class="soon">Blog Coming Soon</div>`)
 }
 
 function toggleCv() {
     if (language === "en") {
         $("#contents").html(`<h4>About me</h4>
     <br/>
-    <strong>Junior full stack web developer. </strong>I have built projects using Handlebars, Vue and React, and created databases with postgreSQL.</br>
+    <strong>Junior full stack web developer. </strong>I have built various full-stack projects using Vue, React and Next, and created databases with postgreSQL, and have recently started using Prisma.</br>
     I have a bachelors degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. <br/>I'm a native speaker of British English with intermediate German (CEFR level: B2).
     <br/> <br/>
     <h5>What I'm doing now</h5>
@@ -359,7 +367,7 @@ function toggleCv() {
     &centerdot; completely rebuilt this website with a new design and simpler code, and deployed it using GitHub workflow to automatically update the live website with new commits
     <br/>
     &centerdot; studied German to B2 level<br/>
-    &centerdot; started a web-dev bootcamp to learn new skills<br/>
+    &centerdot; started an online web-dev bootcamp to learn new skills<br/>
     <br/>
     <h5>What I used to do</h5>
     I spend 15 years working as a project manager, policy advisor and team leader with the UK civil service. This gave me fantastic experience of:<br/>
@@ -370,20 +378,20 @@ function toggleCv() {
     &centerdot; living with change: new management teams with new agendas, radical reorganisations of the department, and frequently changing and reforming teams to meet rapidly changing external requirements
         <br/><br/>
         <a href="./assets/LucyToman_webCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (opens in a new tab)</a>
-    `);
+    `)
     } else {
         $("#contents").html(`<h4>Über mich</h4>
                 <br/>
-                <strong>Junior Full-Stack-Entwickler</strong></br></br>Ich habe einen Full-Stack-Web-Developer-Kurs absolviert, und ich habe Projekte mit Handlebars, Vue und React sowie Datenbanken mit PostgreSQL erstellt. </br></br>Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
+                <strong>Junior Full-Stack-Entwickler</strong></br></br>Ich habe einen Full-Stack-Web-Developer-Kurs absolviert, und ich habe Projekte mit Handlebars, Vue, React und NextJS sowie Datenbanken mit PostgreSQL erstellt. </br></br>Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
             </br></br>
             Ich habe einen Abschluss in Pädagogik und kann 15 Jahre Erfahrung als Politikberaterin und Projektleiterin im britischen öffentlichen Dienst vorweisen.</br></br>
-          `);
+          `)
     }
-    curvita = true;
+    curvita = true
 }
 
 function showImpress() {
-    curvita = false;
+    curvita = false
     $("#contents")
         .html(`<div class="center-impress"><div class="center-impress"><h4>Impressum</h4>
     <br/>
@@ -394,30 +402,30 @@ function showImpress() {
     <h6>Steuernummer</h6>DE320203693<br/>
     <h6>Registrierte Mitgliedschaften</h6>Industrie - und Handelsksmmer zu Berlin<br/>
     </div></div>
-    `);
+    `)
 }
 
 function toggleLang() {
     if (language === "en") {
-        german();
-        language = "de";
+        german()
+        language = "de"
     } else {
-        english();
-        language = "en";
+        english()
+        language = "en"
     }
 
     if (curvita) {
-        toggleCv();
+        toggleCv()
     }
 }
 function toggleTheme() {
-    $("body, button, div, img, a").toggleClass("light");
+    $("body, button, div, img, a").toggleClass("light")
 
-    $("h4, h5, p, li").toggleClass("light");
+    $("h4, h5, p, li").toggleClass("light")
 
     if ($("#theme").hasClass("light")) {
-        $("#theme").html("🌒");
+        $("#theme").html("🌒")
     } else {
-        $("#theme").html("☀️");
+        $("#theme").html("☀️")
     }
 }
