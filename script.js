@@ -69,6 +69,14 @@ const allProjects = {
     ],
     full: [
         {
+            name: "myTube",
+            image: "./assets/myTube.png",
+            link: "https://mytube-xi.vercel.app/",
+            description:
+                "Video sharing app: view shared videos, subscribe to favourite users, and upload your own videos",
+            tech: "NextJS using ReactPlayer with a PostgreSQL database hosted on Railway.app, videos hosted by AWS S3",
+        },
+        {
             name: "Qira's Folk",
             image: "./assets/QFlogo.png",
             link: "https://github.com/lucywho/qiras-folk#qirasfolk",
