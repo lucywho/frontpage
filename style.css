@@ -251,7 +251,7 @@ img {
 .cont-default {
     background-color: transparent;
     background-size: 400% 400%;
-    animation: backgroundChange0 0.5s linear forwards;
+    animation: backgroundChange0 1s linear forwards;
 }
 
 @keyframes backgroundChange0 {

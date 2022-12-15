@@ -23,11 +23,11 @@
             <div id="info">
                 <div id="strapline"></div>
                 <div class="links">
-                    <div class="full" onclick="showFullstack()">Full Stack Projects</div>
-                    <div class="front" onclick="showFront()">Front End Projects</div>
-                    <div class="crochet" onclick="showCrochet()">Crochet</div>
-                    <div class="blog" onclick="showBlog()">Blog</div>
-                    <div class="home" onclick="defaultCon()">Home</div>
+                    <div  onclick="showFullstack()">Full Stack Projects</div>
+                    <div  onclick="showFront()">Front End Projects</div>
+                    <div  onclick="showCrochet()">Crochet</div>
+                    <div onclick="showComing()">Coming Up</div>
+                    <div  onclick="defaultCon()">Home</div>
                 </div>
             </div>
         </div>
@@ -37,12 +37,12 @@
                 <div id="cv" onclick="toggleCv()">
                     </div>
                 <div class="">
-                    <a href="https://www.linkedin.com/in/lucytoman/" target="_blank"><i class="fab fa-linkedin"> </i> LinkedIn</a>
+                    <a rel=”noopener” href="https://www.linkedin.com/in/lucytoman/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"> </i> LinkedIn</a>
                 </div>
-                <div class=""><a href="https://github.com/lucywho" target="_blank"><i class="fab fa-github"> </i> GitHub</a>
+                <div class=""><a rel=”noopener” href="https://github.com/lucywho" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"> </i> GitHub</a>
                 </div>
                 <div class="">
-                    <a id="email-wrapper" href="mailto:lucys.code3+website@gmail.com" target="_blank">
+                    <a id="email-wrapper"  href="mailto:lucys.code3+website@gmail.com" target="_top" >
                         <i class="far fa-envelope"> </i> 
                             <div id="email">email</div>
                     </a>
@@ -51,8 +51,8 @@
 
             <div id="footer">
                 <div id="format">
-                    <div><button id="lang" onclick="toggleLang()"></button></div>
-                    <div><button id="theme"  onclick="toggleTheme()"></button></div>
+                    <div><button id="lang" onclick="toggleLang()" title="toggle language"></button></div>
+                    <div><button id="theme"  onclick="toggleTheme()" title="toggle dark mode"></button></div>
                 </div>
                 <div id="impress" onclick="showImpress()">impressum</div>
             </div>

@@ -77,6 +77,14 @@ const allProjects = {
             tech: "NextJS using ReactPlayer with a PostgreSQL database hosted on Railway.app, videos hosted by AWS S3",
         },
         {
+            name: "JobAwesome",
+            image: "./assets/jobawesome.png",
+            link: "http://job-board-red.vercel.app/",
+            description:
+                "Find your place! Find your people! Companies can post jobs and applicants can apply directly through the app.",
+            tech: "NextJS and Tailwindcss, with Prisma and a PostgreSQL database",
+        },
+        {
             name: "Qira's Folk",
             image: "./assets/QFlogo.png",
             link: "https://github.com/lucywho/qiras-folk#qirasfolk",
@@ -99,14 +107,6 @@ const allProjects = {
             description:
                 "Test your knowledge of German prepositions! Delivers 10 random questions each time, with the option to try again or to see the correct answer. Keeps score and gives positive feedback",
             tech: "SPA built in React.js with a PostgreSQL database",
-        },
-        {
-            name: "JobAwesome",
-            image: "./assets/jobawesome.png",
-            link: "http://job-board-red.vercel.app/",
-            description:
-                "Find your place! Find your people! Companies can post jobs and applicants can apply directly through the app.",
-            tech: "NextJS and Tailwindcss, with Prisma and a PostgreSQL database",
         },
         {
             name: "Who For All!",
@@ -355,44 +355,48 @@ function showCrochet() {
     $("#projwrap").append(copy)
 }
 
-function showBlog() {
+function showComing() {
     curvita = false
-    $("#contents").html(`<div class="soon">Blog Coming Soon</div>`)
+    $("#contents").html(`<div class="soon "><h4>What's Next?</h4>
+    <p>This website started out as an experiment in building a single page application with no framework, and it was a lot of fun to do <strong>however</strong> frameworks do exist for reason, and I've really reached the end of what it is possible and/or sensible to do with just HTML/CSS/JS.</br></br>
+    I'm currently thinking about what I want my new website to look like and how I want people to use it. In particular, I think I want more space to talk about my projects, and to make it easier for users to navigate them, which is pushing me towards a more blog-style setup.</br></br>
+    Once I've worked out what I really want, and found some time in between other projects(!), then I'll decide on an appropriate framework and get building!</p></div>`)
 }
 
 function toggleCv() {
     if (language === "en") {
         $("#contents").html(`<h4>About me</h4>
     <br/>
-    <strong>Junior full stack web developer. </strong>I have built various full-stack projects using Vue, React and Next, and created databases with postgreSQL, and have recently started using Prisma.</br>
-    I have a bachelors degree in Education and 15 years experience as a policy advisor and project manager in the UK Civil Service. <br/>I'm a native speaker of British English with intermediate German (CEFR level: B2).
+    <strong>Junior full stack web developer. </strong><br/>HTML. CSS and tailwind. JavaScript and Typescript. Vue, React and Next. postgreSQL and Prisma.</br></br>
+    I have a bachelors degree in Education, 15 years experience as a policy and project manager in the UK Civil Service, and have worked as a technical copy editor and product manager. <br/>I'm a native speaker of British English with intermediate German (CEFR level: B2).
     <br/> <br/>
     <h5>What I'm doing now</h5>
-    &centerdot; learning Next.js, tailwindcss, and Prisma<br/>
-    &centerdot; looking for a junior developer role with a fun, friendly, supportive company
+    &centerdot; a training internship with an international IT services company</br>
+    &centerdot; learning about CSS algorithms
        <br/><br/>
     <h5>What I've done recently</h5>
-    &centerdot; completely rebuilt this website with a new design and simpler code, and deployed it using GitHub workflow to automatically update the live website with new commits
-    <br/>
+    &centerdot; learned TypeScript<br/>
+    &centerdot; done an online web-dev bootcamp focussed on Next.js<br/>
+    &centerdot; deployed this website using GitHub workflow to automatically update the live website with new commits<br/>
     &centerdot; studied German to B2 level<br/>
-    &centerdot; started an online web-dev bootcamp to learn new skills<br/>
     <br/>
     <h5>What I used to do</h5>
-    I spend 15 years working as a project manager, policy advisor and team leader with the UK civil service. This gave me fantastic experience of:<br/>
+    I spend 15 years working as a project manager, policy advisor and team leader with the UK civil service. This gave me extensive experience of:<br/>
     &centerdot; working under pressure to meet legal and regulatory deadlines<br/>
-    &centerdot; keeping the big picture in mind while sweating the details: making sure the final product does what its supposed to even in the edge cases<br/>
+    &centerdot; keeping the big picture in mind while sweating the details: making sure the final product works as expected, even in the edge cases<br/>
     &centerdot; building consensus among interest groups with apparently contradictory wishes in order to create outcomes that everyone can live with
     <br/>
-    &centerdot; living with change: new management teams with new agendas, radical reorganisations of the department, and frequently changing and reforming teams to meet rapidly changing external requirements
+    &centerdot; living with change: new agendas, radical reorganisations of the department, and frequently changing and reforming teams to meet rapidly changing external pressures
         <br/><br/>
-        <a href="./assets/LucyToman_webCV.pdf" target="_blank"><i class='far fa-file-alt'></i> Full CV (opens in a new tab)</a>
+        
     `)
     } else {
         $("#contents").html(`<h4>Über mich</h4>
                 <br/>
-                <strong>Junior Full-Stack-Entwickler</strong></br></br>Ich habe einen Full-Stack-Web-Developer-Kurs absolviert, und ich habe Projekte mit Handlebars, Vue, React und NextJS sowie Datenbanken mit PostgreSQL erstellt. </br></br>Ich suche jetzt nach neuen Herausforderungen als Junior Developer.
-            </br></br>
+                <strong>Junior Full-Stack-Entwickler</strong><br/>&centerdot;HTML<br/>&centerdot;CSS & tailwind<br/>&centerdot;JavaScript & Typescript<br/>&centerdot;Vue, React & Next<br/>&centerdot;postgreSQL & Prisma.</br></br>
+            
             Ich habe einen Abschluss in Pädagogik und kann 15 Jahre Erfahrung als Politikberaterin und Projektleiterin im britischen öffentlichen Dienst vorweisen.</br></br>
+            Ich spreche Deutsch auf mittlerem Niveau (CEFR B2) und Englisch als Muttersprache.
           `)
     }
     curvita = true
