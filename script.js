@@ -20,7 +20,7 @@ const allProjects = {
         {
             name: "The Peopleiser",
             image: "./assets/peopleiser.png",
-            link: "https://people-iser.netlify.app/",
+            link: "https://peopleiser.vercel.app/",
             description:
                 "An app for visualising large numbers of people by putting them in vehicles (or Olympiastadion!).",
             tech: "Keeping it simple with HTML, CSS, & jQuery",
@@ -28,7 +28,7 @@ const allProjects = {
         {
             name: "Crounter",
             image: "./assets/crounter.png",
-            link: "https://crounter.netlify.app/",
+            link: "https://crounter.vercel.app/",
             description:
                 "Solving one of my own problems with an app that helps the user keep track of stitches, rows and pattern repeats on a single screen",
             tech: "React.js hooks",
@@ -53,7 +53,7 @@ const allProjects = {
         {
             name: "txet-mess",
             image: "./assets/txet-mess.png",
-            link: "https://txet-mess.netlify.app/",
+            link: "https://txet-mess.vercel.app/",
             description:
                 "It is a meme universally acknowledged that a word in possession of all its letters can still be easily read if the middle letters are scrambled, because the human brain reads the whole word not the individual letters...",
             tech: "Old school vanilla JavaScript",
@@ -61,7 +61,7 @@ const allProjects = {
         {
             name: "Connect 4",
             image: "./assets/connect4.png",
-            link: "https://connect4-purple.netlify.app/",
+            link: "https://connect4-lake.vercel.app/",
             description:
                 "The classic game, but in hideous colours.</br> This is why you need to employ real designers.",
             tech: "HTML, CSS, jQuery",
