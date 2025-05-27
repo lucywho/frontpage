@@ -290,10 +290,15 @@ img {
   justify-content: space-around;
   align-items: start;
   padding: 0.75rem 0;
-  border-top: 1px solid var(--background-bright);
-  background-color: var(--background-dark);
-  opacity: 0.8;
-  color: var(--menu-text);
+  background: rgba(106, 37, 90, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#impressum-footer.visible.light {
+  color: var(--background-dark);
 }
 
 #copyright {
@@ -315,6 +320,12 @@ img {
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   color: var(--link-hover);
+  box-shadow: var(--link-hover) 0px 7px 20px 0px;
+}
+
+#close.light {
+  color: var(--link-light-hover);
+  box-shadow: var(--link-light-hover) 0px 7px 20px 0px;
 }
 
 /* ANIMATIONS */

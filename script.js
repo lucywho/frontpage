@@ -69,6 +69,14 @@ const allProjects = {
   ],
   full: [
     {
+      name: 'familyPhotos',
+      image: './assets/famphotos.png',
+      link: 'https://github.com/lucywho/tomanphotos',
+      description:
+        'Photo gallery app to help my parents view and organise 60+ years of family photos. Work in progress.',
+      tech: 'NextJS, PostgreSQL database hosted on Railway.app, photos hosted by AWS S3',
+    },
+    {
       name: 'myTube',
       image: './assets/myTube.png',
       link: 'https://mytube-xi.vercel.app/',
@@ -458,7 +466,7 @@ function toggleLang() {
   }
 }
 function toggleTheme() {
-  $('body, button, div, img, a').toggleClass('light');
+  $('body, button, div, img, a, footer').toggleClass('light');
 
   $('h4, h5, p, li').toggleClass('light');
 
