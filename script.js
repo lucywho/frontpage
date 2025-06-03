@@ -21,6 +21,11 @@ let language;
 
 //FUNCTIONS
 
+window.showWelcome = function () {
+  curvita = false;
+  welcomeText();
+};
+
 window.showFullstack = function () {
   curvita = false;
   proj = allProjects.full;
