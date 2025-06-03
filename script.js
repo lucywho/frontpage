@@ -79,7 +79,7 @@ const allProjects = {
     {
       name: 'myTube',
       image: './assets/myTube.png',
-      link: 'https://mytube-xi.vercel.app/',
+      link: 'https://github.com/lucywho/mytube',
       description:
         'Video sharing app: view shared videos, subscribe to favourite users, and upload your own videos',
       tech: 'NextJS using ReactPlayer with a PostgreSQL database hosted on Railway.app, videos hosted by AWS S3',
@@ -87,7 +87,7 @@ const allProjects = {
     {
       name: 'JobAwesome',
       image: './assets/jobawesome.png',
-      link: 'http://job-board-red.vercel.app/',
+      link: 'https://github.com/lucywho/JobAwesome',
       description:
         'Find your place! Find your people! Companies can post jobs and applicants can apply directly through the app.',
       tech: 'NextJS and Tailwindcss, with Prisma and a PostgreSQL database',
@@ -232,7 +232,7 @@ const allProjects = {
 
 function defaultCon() {
   $('#contents').html(
-    `<div class="soon cont-default"><h2>Welcome to my website</h2></br></br><p>A gallery of stuff that I'm doing or thinking about</p>
+    `<div class="welcome cont-default"><h2>Welcome to my website</h2></br></br><p>A gallery of stuff that I'm doing or thinking about</p>
         </br><p>Take a look around and get in touch!</p>
      </div>`
   );
@@ -367,11 +367,13 @@ function showComing() {
   if (language === 'en') {
     $('#contents').html(`<div class="soon"><h4>What's Next?</h4>
     </br>
-    <p>This website started out as an experiment in building a single page application with no framework, and it was a lot of fun to do <strong>however</strong> frameworks do exist for reason, and I've really reached the end of what it is sensible to do with just HTML/CSS/JS.</br></br>
-    I'm currently thinking about what I want my new website to look like and how I want people to use it. In particular, I think I want more space to talk about my projects, and to make it easier for users to navigate them, which is pushing me towards a more blog-style setup.
-    </br></br>
-    I'm also torn between whether I want to start from scratch and learn something new, maybe refresh my Astro skills, perhaps ask AI to completely rebuild it and see what happens... </br></br>
-    Once I've worked out what I really want, and found some time in between other projects(!), then I'll decide on an appropriate framework and get building!</p></div>`);
+    <div class="soon-text">
+    <p>This website started out as an experiment in building a single page application with no framework, and it was a lot of fun to do <strong>however</strong> frameworks do exist for reason, and I've really reached the end of what it is sensible to do with just HTML/CSS/JS.  I'm currently thinking about what I want my new website to look like and how I want people to use it. In particular, I think I want more space to talk about my projects, and to make it easier for users to navigate them, which is pushing me towards a more blog-style setup.
+    </p>
+    <p>I'm also torn between whether I want to start from scratch and learn something new, maybe refresh my Astro skills, perhaps ask AI to completely rebuild it and see what happens...
+    Once I've worked out what I really want, and found some time in between other projects(!), then I'll decide on an appropriate framework and get building!</p>
+    <p>In the meantime, I'm also revisiting my full stack projects. I've been working front-end only for a while now, and haven't had much time for personal projects, so my old full-stack Next.js projects are a bit (a lot!) out of date. I'm currently working on migrating them from pages router to app router. Unfortunately, the versions hosted on Vercel have lost their connection to their Railway databases recently, so I also need to fix that.</p>
+    <p>...and, of course, I need to find time to crochet and do my day job!</p></div></div>`);
   } else {
     $('#contents').html(`<div class="soon"><h4>Demn&auml;chst?</h4>
     </br>
