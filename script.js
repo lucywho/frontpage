@@ -40,6 +40,7 @@ window.showCrochet = function () {
 };
 
 window.showComing = function () {
+  curvita = false;
   if (language === 'en') {
     $('#contents').html(`<div class="soon"><h4>What's Next?</h4>
     </br>
@@ -141,6 +142,8 @@ window.toggleLang = function () {
 
   if (curvita) {
     toggleCv();
+  } else if ($('#contents > div').hasClass('soon')) {
+    showComing();
   }
 };
 window.toggleTheme = function () {
