@@ -52,12 +52,12 @@ export const allProjects = {
   ],
   full: [
     {
-      name: 'familyPhotos',
-      image: './assets/famphotos.png',
-      link: 'https://github.com/lucywho/tomanphotos',
+      name: 'family-photos',
+      image: './assets/fam-photos.png',
+      link: 'https://family-photos.vercel.app/',
       description:
-        'Photo gallery app to help my parents view and organise 60+ years of family photos. Work in progress.',
-      tech: 'NextJS, PostgreSQL database hosted on Railway.app, photos hosted by AWS S3',
+        'Photo gallery app to help my parents view and organise 60+ years of family photos.',
+      tech: 'NextJS, deployed on Vercel with Neon, PostgreSQL database, photos hosted in an S3 bucket, and auth emails sent by SES',
     },
     {
       name: 'myTube',
